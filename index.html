@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/jogo-da-velha.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <title> Jogo da Velha</title>
+
+    <script>
+     var jogo=[];
+     var tabu=[];
+     var quemjoga=0;//0=jogador 1=cpu
+     var jogando=true;
+     var verifica;
+     var nivel=1;
+     var jogadacpu=1;
+     var quemcomeça=1;
+
+     function jogar(p){
+        if((jogando)&&(quemjoga==0)){
+          switch(p){
+            case 1:
+                if(jogo[0][0]==""){
+                 jogo[0][0]=="X";
+                 quemjoga=1;
+                }
+                break;
+
+            case 2:
+                if(jogo[0][1]==""){
+                 jogo[0][1]=="X";
+                 quemjoga=1;
+                }
+                break;
+            case 3:
+                if(jogo[0][2]==""){
+                 jogo[0][2]=="X";
+                 quemjoga=1;
+                }
+                break;
+            case 4:
+                if(jogo[1][0]==""){
+                 jogo[1][0]=="X";
+                 quemjoga=1;
+                }
+                break;
+            case 5:
+                if(jogo[1][1]==""){
+                 jogo[1][1]=="X";
+                 quemjoga=1;
+                }
+                break;
+            case 6:
+                if(jogo[1][2]==""){
+                 jogo[1][2]=="X";
+                 quemjoga=1;
+                }
+                break;
+            case 7:
+                if(jogo[2][0]==""){
+                 jogo[2][0]=="X";
+                 quemjoga=1;
+                }
+                break;
+            case 8:
+                if(jogo[2][1]==""){
+                 jogo[2][1]=="X";
+                 quemjoga=1;
+                }
+                break;
+            case 9:
+                if(jogo[2][2]==""){
+                 jogo[2][2]=="X";
+                 quemjoga=1;
+                }
+                break;
+                 }
+              }
+           }
+          atualizatabu();
+          
+    function atualizatabu(){
+       for(var l=0;l<3;l++){
+        for(var c=0;c<3;c++){
+            if(jogo[l][c]=="X"){
+                tabu[l][c].innerHTML="X";
+                tabu[l][c].style.cursor="default";
+            }else if(jogo[l][c]=="O"){
+                tabu[l][c].innerHTML="O";
+                tabu[l][c].style.cursor="default";
+            }else{
+                tabu[l][c].innerHTML="";
+                tabu[l][c].style.cursor="pointer";
+            }
+
+        }
+       }
+    }
+    
+    
+     function inicia(){
+      jogando=true;
+       jogadacpu=1;
+       jogo=[
+        ["","",""], //0,0/0,1/0,2/
+        ["","",""],//1,0/1,1/1,2/
+        ["","",""] //2,0/2,1/2,2/
+       ];
+       tabu=[
+        [document.getElementById("p1"), document.getElementById("p2"), document.getElementById("p3")],
+        [document.getElementById("p4"), document.getElementById("p5"), document.getElementById("p6")],
+        [document.getElementById("p7"), document.getElementById("p8"), document.getElementById("p9")]
+       ];
+     }
+     
+
+     window.addEventListener("load", inicia);
+    </script>
+
+</head>
+<header>
+    <h1>Jogo da Velha</h1>
+</header>
+<body class="back">
+    <div id="dvmenu">
+        <p id="pcomeça"></p>
+        <button onclick="">Iniciar jogo</button>
+    </div>
+    <div id="dvjogo">
+        <div id="p1" class="posjogo" onclick="jogar(1)"></div>
+        <div id="p2" class="posjogo" onclick="jogar(2)"></div>
+        <div id="p3" class="posjogo" onclick="jogar(3)"></div>
+        <div id="p4" class="posjogo" onclick="jogar(4)"></div>
+        <div id="p5" class="posjogo" onclick="jogar(5)"></div>
+        <div id="p6" class="posjogo" onclick="jogar(6)"></div>
+        <div id="p7" class="posjogo" onclick="jogar(7)"></div>
+        <div id="p8" class="posjogo" onclick="jogar(8)"></div>
+        <div id="p9" class="posjogo" onclick="jogar(9)"></div>
+    </div>
+</body>
+</html>

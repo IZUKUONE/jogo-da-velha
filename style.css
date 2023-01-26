@@ -1,0 +1,89 @@
+header{
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 600px;
+    font-size: 25px;
+}
+
+body{
+     background-color: black;
+}
+#dvjogo{
+width: 160px;
+height: 160px;
+display: flex;
+flex-wrap: wrap;
+align-content: flex-start;
+margin-left: 660px;
+margin-top: 240px;
+}
+
+button{
+    display: flex;
+    position: absolute;
+    top: 500px;
+    left: 710px;
+    font-family:'Itim', cursive;
+}
+
+.posjogo{
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+#p1{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+#p2{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+#p3{
+    border-bottom: 1px solid black;
+    border-left:1px solid black;
+    background-color: white;
+}
+#p4{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background-color: white;
+}
+#p5{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    background-color: white;
+}
+#p6{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    background-color: white;
+}
+#p7{
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    background-color: white;
+}
+#p8{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    background-color: white;
+}
+#p9{
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    background-color: white;
+}
